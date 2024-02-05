@@ -8,13 +8,10 @@ int n1, n2;
 
 class person {
 public:
-    virtual void display() {
+	    virtual void display()
+		{
         cout << "Enter the person name: ";
         cin >> str;
-    }
-
-    virtual void showMessage() {
-        cout << "Class person created." << endl;
     }
 };
 
@@ -23,10 +20,6 @@ public:
     void display1() {
         cout << "Enter the person is student or teacher (S/T): ";
         cin >> ch;
-    }
-
-    void showMessage() override {
-        cout << "Class student created." << endl;
     }
 };
 
@@ -43,10 +36,6 @@ public:
             cout << "Invalid!";
         }
     }
-
-    void showMessage() override {
-        cout << "Class teacher created." << endl;
-    }
 };
 
 int main() {
@@ -55,11 +44,9 @@ int main() {
 
     obj.display();
     obj.display1();
-    obj.showMessage();
 
     obj1.display();
     obj1.display2();
-    obj1.showMessage();
 
     return 0;
 }
