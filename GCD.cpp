@@ -3,11 +3,15 @@
 using namespace std;
 
 int gcd(int n1, int n2) {
-  int k = 1;
-  do {
-    k++;
-  } while (n1 % k != 0 || n2 % k != 0);
-  return k;
+  int k = 0,lcm;
+for(int i=1;i<=n1 && i<=n2;i++)
+{
+	if(n1%i==0 && n2%i==0)
+	{
+		k=1;
+	}
+}
+lcm=(n1*n2)/k;
 }
 
 int main() {
